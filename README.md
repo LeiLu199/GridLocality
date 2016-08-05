@@ -3,3 +3,6 @@ This project is to construct a grid object and perform some tasks including node
 
 
 # Author: Lei Lu
+
+# Usage
+This repository contains three modules: 
