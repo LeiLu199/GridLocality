@@ -6,11 +6,12 @@ Created on Thu Aug  4 17:13:41 2016
 """
 from GridLocality import GridLocality
 
-grid = GridLocality(2,True)
-#grid.Node_retrieval(6)
+grid = GridLocality(5, False)
+#print grid.node_retrieval(6)
 
-#print grid.Find_neighbor(4, 4, 3, 'diamond')
+#grid.getSquareNeighbors(4, 4, 1)
+#print grid.getNeighbors(100, 5, 3, 'diamond')
     
-#print grid.Resourse_distribution( 10, [1,4,7], 2)
+#print grid.resourseDistribution( 10, [1,4,7], 2)
     
-print grid.Find_reprentative()
+print grid.findReprentative()
