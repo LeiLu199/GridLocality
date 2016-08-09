@@ -6,12 +6,19 @@ Created on Thu Aug  4 17:13:41 2016
 """
 from GridLocality import GridLocality
 
-grid = GridLocality(5, False)
-#print grid.node_retrieval(6)
 
-#grid.getSquareNeighbors(4, 4, 1)
-#print grid.getNeighbors(100, 5, 3, 'diamond')
+def main():
+	grid = GridLocality(3, True)
+	
+	#node_info = grid.nodeRetrieval(6)
+
+	#neighbors = grid.getNeighbors(4, 5, 3, 'diamond')
     
-#print grid.resourseDistribution( 10, [1,4,7], 2)
+	#resource = grid.resourseDistribution( 10, [1,4,7], 2)
     
-print grid.findReprentative()
+	winner = grid.findReprentative()
+	
+	print winner
+	
+if __name__ == "__main__":
+    main()

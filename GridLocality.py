@@ -20,7 +20,7 @@ class Node():
         print "({}, {}, {})".format(self.x, self.y, self.i)
         
     def __str__(self):
-        return "({}, {}), i: {}, v: {}".format(self.x, self.y, self.i, self.v)
+        return "coordinates: ({}, {}), i: {}, v: {}".format(self.x, self.y, self.i, self.v)
         
     def isAt(self, center_x, center_y):
         return self.x == center_x and self.y == center_y
@@ -104,7 +104,7 @@ class GridLocality(object):
        
     def findReprentative(self):
         j = sum([n.getMagnitude() for n in self.grid])/len(self.grid)
-        representative = self.grid[0]
+        representative = self.grid[8] #initilize the representative
         rep_AC = 0
         for node in self.grid:
             node_AC = self.findAC(node, j)
