@@ -6,6 +6,7 @@ Created on Thu Aug  4 15:49:39 2016
 """
 import numpy as np
 from helper import cosineSimilarity, nearestXYonGrid
+import math 
 
 class Node():
     def __init__(self, i, n):
@@ -103,7 +104,7 @@ class GridLocality(object):
         return resource_list
        
     def findReprentative(self):
-        j = sum([n.getMagnitude() for n in self.grid])/len(self.grid)
+        j = (sum([n.getMagnitude() for n in self.grid])/len(self.grid))/math.sqrt(self.length)
         representative = self.grid[8] #initilize the representative
         rep_AC = 0
         for node in self.grid:
