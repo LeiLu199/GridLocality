@@ -10,8 +10,6 @@ from scipy import spatial
 def cosineSimilarity(node1, node2):
     return 1-spatial.distance.cosine(node1.v, node2.v)
     
-def nearestXYonGrid(x, y, length):
-    return nearestIndexOnGrid(x, length), nearestIndexOnGrid(y, length)
         
 def nearestIndexOnGrid(i, length):
     if i < 0:
@@ -20,3 +18,6 @@ def nearestIndexOnGrid(i, length):
         return length - 1
     else:
         return i
+    
+def nearestXYonGrid(x, y, length):
+    return nearestIndexOnGrid(x, length), nearestIndexOnGrid(y, length)

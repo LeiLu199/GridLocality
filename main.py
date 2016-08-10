@@ -8,7 +8,7 @@ from GridLocality import GridLocality
 
 
 def main():
-	grid = GridLocality(5, False)
+	grid = GridLocality(5, True)
 	
 	node_info = grid.nodeRetrieval(6)
 
@@ -18,7 +18,7 @@ def main():
     
 	winner = grid.findReprentative()
 	
-	print node_info, neighbors, resource, winner
+	return node_info, neighbors, resource, winner
 	
 if __name__ == "__main__":
     main()
