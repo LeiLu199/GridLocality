@@ -12,6 +12,9 @@ def cosineSimilarity(node1, node2):
     
         
 def nearestIndexOnGrid(i, length):
+    '''
+    rescale integer i into range (0,length) if i is not in this range
+    '''
     if i < 0:
         return 0
     elif i >= length:
@@ -20,4 +23,8 @@ def nearestIndexOnGrid(i, length):
         return i
     
 def nearestXYonGrid(x, y, length):
+    '''
+    find the nearest coordinates (x,y) on the grid 
+    if the given (x,y) are not on the grid
+    '''
     return nearestIndexOnGrid(x, length), nearestIndexOnGrid(y, length)

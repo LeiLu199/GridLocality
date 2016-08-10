@@ -54,9 +54,15 @@ class GridLocality(object):
 
             
     def nodeRetrieval(self, index):
-       return self.grid[index]
+        '''
+        given the index, return features (x, y, i, v) for the node object
+        '''
+        return self.grid[index]
        
     def getNode(self, x, y):
+        """
+        given the coordinates(x,y), return the node object at this coordinates
+        """
         if x >= self.length or y >= self.length:
             return None
         i = self.length * x + y
