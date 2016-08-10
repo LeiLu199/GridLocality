@@ -10,8 +10,8 @@ import math
 
 class Node():
     def __init__(self, i, n):
-    # i is the index number of the node in the grid, n is the length of
-    # the grid.
+    # i is the index number of the node in the grid, 
+    # n is the length of the grid.
         self.i = i
         self.x = i // n
         self.y = i % n
@@ -37,16 +37,13 @@ class Node():
         
 
 class GridLocality(object):
-    """A n x n grid board. 
+    """A list of n*n node objects. 
 
     Attributes:
         n: a positive integer representing the number of nodes on each side 
         stdout: a boolean variable 
     """
-    def __init__(self,n,stdout):
-        """
-        Return a grid object whose length is n and stdout is stdout
-        """    
+    def __init__(self,n,stdout):  
         self.length = n
         self.grid = []
         for i in range(n * n):
@@ -66,6 +63,16 @@ class GridLocality(object):
         return self.nodeRetrieval(i)
             
     def getNeighbors(self, x, y, m, n_type):
+        '''
+        parameters:
+        
+        x: integer--x coordinate
+        y: integer--y coordinate
+        m: integer--distance
+        n_type: string--type of neighbors
+        
+        return a lists of node objects that are n_type neighbors of node at (x,y)
+        '''
     # n_type is the neighborhood type.         
         x, y = nearestXYonGrid(x, y, self.length)
         neighbors = []
@@ -93,6 +100,8 @@ class GridLocality(object):
         g: array-- list of indice 
         startegy: int -- decide distribution method
         
+        return a list of floats 
+        
         '''            
         if strategy == 1:   
             weight_list = [self.nodeRetrieval(i).getMagnitude() for i in g]
@@ -104,6 +113,10 @@ class GridLocality(object):
         return resource_list
        
     def findReprentative(self):
+        '''
+    
+        return the node object that is most similar to other nodes in the grid
+        '''
         j = (sum([n.getMagnitude() for n in self.grid])/len(self.grid))/math.sqrt(self.length)
         representative = self.grid[8] #initilize the representative
         rep_AC = 0
