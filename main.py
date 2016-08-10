@@ -17,8 +17,12 @@ def main():
 	resource = grid.resourseDistribution( 10, [1,2,6], 1)
     
 	winner = grid.findReprentative()
-	
-	print node_info, neighbors, resource, (winner.x, winner.y)
+
+	return node_info, neighbors, resource, (winner.x, winner.y)
 	
 if __name__ == "__main__":
-    main()
+    node_info, neighbors, resource, winner = main()
+    print "The features of the node are: " + str(node_info)
+    print "The neighbors of the node are: " + str(neighbors)
+    print "The resource distribution is: " + str(resource)
+    print "The winner of this grid is: " + str(winner)

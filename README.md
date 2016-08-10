@@ -59,3 +59,4 @@ This repository contains three modules:
 3) main.py
 
 > The main module instantiated a grid instance and call the functions 1)  grid.nodeRetrieval(), 2)grid.getNeighbors(), 3)grid.resourseDistribution(), and 4)grid.findReprentative().
+> Simply run the main.py file and it will print all the results.
